@@ -43,16 +43,16 @@ var injector = {
 	toggleAutoInject: function(){
 		if(injector.autoInject){
 			injector.autoInject = false;
-			autoInjectIndicator[(typeof document.body.style.WebkitAppearance=="string")?"innerText":"innerHTML"] = 'Auto Inject Off';
+			autoInjectIndicator[(typeof document.body.style.WebkitAppearance=="string")?"innerText":"innerHTML"] = 'HACK désactivé';
 		} else {
 			injector.autoInject = true;
-			autoInjectIndicator[(typeof document.body.style.WebkitAppearance=="string")?"innerText":"innerHTML"] = 'Auto Inject On';
+			autoInjectIndicator[(typeof document.body.style.WebkitAppearance=="string")?"innerText":"innerHTML"] = 'HACK initialisé';
 		}
 	},
 
 	inject: function() {
 		if(window.app.user.authId == channel.data.actors[channel.data.activePlayerIndex].authId){
-			updateStatus("Injecting normally");
+			updateStatus("Injecting du HACK en cours");
 			var q = new RegExp(channel.data.wordRoot,"i");
 			var i = injector.lastWord;
 			while(i != ++injector.lastWord && injector.canWrite){
@@ -69,7 +69,7 @@ var injector = {
 				}
 			}
 			injector.lastWord = 0;
-			updateStatus("Normal Inject Failed");
+			updateStatus("L'injection du HACK a échoué");
 		}
 	}
 };
