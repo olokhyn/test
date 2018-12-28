@@ -85,10 +85,10 @@ function createInLine(parent,newThingType){
 parentThing = document.getElementById("SettingsTab");
 parentThing.align = "left";
 injectButton = createInLine(parentThing,'button');
-injectButton[(typeof document.body.style.WebkitAppearance=="string")?"innerText":"innerHTML"] = 'Inject';
+injectButton[(typeof document.body.style.WebkitAppearance=="string")?"innerText":"innerHTML"] = 'Injecter le HACK';
 injectButton.addEventListener('click',injector.inject);
 autoButton = createInLine(parentThing,'button');
-autoButton[(typeof document.body.style.WebkitAppearance=="string")?"innerText":"innerHTML"] = 'Auto ';
+autoButton[(typeof document.body.style.WebkitAppearance=="string")?"innerText":"innerHTML"] = 'HACK automatique';
 autoButton.addEventListener('click',injector.toggleAutoInject);
 var autoInjectIndicator = document.createElement('li');
 parentThing.appendChild(autoInjectIndicator);
